@@ -1,0 +1,5 @@
+{
+  "DATA_LOGIN": "<your database login>",
+  "DATA_PASS": "<your database password>",
+  "DATA_CONNECTION": "<your database url>"
+}
