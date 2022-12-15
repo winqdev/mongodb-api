@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 //Config
-const { DATA_LOGIN, DATA_PASS } = require("./config.json")
+const { DATA_LOGIN, DATA_PASS, DATA_CONNECTION } = require("./config.json")
 var port = 80
 //Using body parser
 app.use(bodyParser.urlencoded({
@@ -18,7 +18,7 @@ const listener = app.listen(port, () => {
 });
 
 //Database
-    mongoose.connect(`mongodb://${DATA_LOGIN}:${DATA_PASS}@dono-01.danbot.host:1421/?authSource=admin`);
+    mongoose.connect(`mongodb://${DATA_LOGIN}:${DATA_PASS}@${DATA_CONNECTION}/?authSource=admin`);
   
     var db = mongoose.connection;
   
